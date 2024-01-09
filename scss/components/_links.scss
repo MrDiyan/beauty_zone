@@ -1,0 +1,21 @@
+.links-header {
+    color: var(--color-brand-dark);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.links-header:hover {
+    color: var(--color-brand-light)
+}
+
+.links-footer {
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.links-footer:hover {
+    color: var(--color-brand-light)
+}

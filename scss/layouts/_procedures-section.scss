@@ -1,0 +1,23 @@
+.procedures-section {
+    margin-bottom: 96px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &__slider {
+        display: grid;
+        grid-template-columns: 44px 1fr 44px;
+        grid-column-gap: 41px;
+        align-items: center;
+    }
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__button {
+        display: flex;
+    }
+}

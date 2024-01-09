@@ -1,0 +1,86 @@
+.footer {
+    padding: 56px 0;
+    position: relative;
+    background: url(/images/footer-bg.svg);
+    background-color: var(--color-brand-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__container,
+    &__nav,
+    &__adress {
+        display: flex;
+        justify-content: flex-end;
+        gap: 186px;
+        flex-grow: 1;
+    }
+
+    &__container {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(/images/decor-flacon.png);
+            bottom: -56px;
+            right: -96px;
+            width: 247px;
+            height: 152px;
+        }
+    }
+
+    &__logo {
+        flex-grow: 1;
+    }
+
+    &__menu,
+    &__contacts,
+    &__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 203px;
+        gap: 16px;
+        flex-grow: 1;
+        line-height: 0;
+    }
+
+
+    &__contacts {
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-grow: 1;
+        }
+
+        &-socials {
+            display: flex;
+            gap: 24px;
+            flex-grow: 1;
+        }
+    }
+
+    &__socials {
+        &-icon {
+            fill: var(--color-white);
+            transition: .2s;
+        }
+
+        &-icon:hover {
+            fill: var(--color-brand-light);
+        }
+    }
+
+    &__info {
+
+        &-privacy {}
+
+        &-copyright {
+            margin: 0;
+            color: var(--color-secondary-dark);
+            font-size: 13px;
+        }
+    }
+}

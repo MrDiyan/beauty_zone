@@ -1,0 +1,51 @@
+.slider-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 456px;
+    width: 344px;
+    border-radius: 120px 4px;
+    background: linear-gradient(180deg, rgba(1, 28, 68, 0.00) 48.53%, rgba(1, 28, 68, 0.73) 84.61%, #011C44 101.39%);
+    overflow: hidden;
+
+
+    &:hover {
+        transition: 0.3s;
+        background: linear-gradient(180deg, rgba(1, 28, 68, 0.00) 58.53%, rgba(1, 28, 68, 0.73) 94.61%, #011C44 111.39%);
+
+        .slider-card__image {
+            transform: scale(1.1);
+
+        }
+
+        .slider-card__text {
+            padding-bottom: 36px;
+
+        }
+    }
+
+    &__image {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s;
+
+    }
+
+    &__text {
+        margin: 0 auto;
+        padding-bottom: 46px;
+        line-height: 1.2;
+        color: var(--color-white);
+        text-align: center;
+        width: 156px;
+        transition: padding-bottom 0.3s;
+        text-decoration: none;
+
+
+    }
+}

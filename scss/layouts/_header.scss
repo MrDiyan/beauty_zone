@@ -1,0 +1,35 @@
+.header {
+    position: absolute;
+    height: 106px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    &__container {
+        margin: 0 auto;
+        height: 106px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 56px;
+        font-size: 18px;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 32px;
+
+        &-icon {
+            fill: var(--color-brand-dark);
+        }
+
+        &-icon:hover {
+            fill: var(--color-brand-light);
+        }
+    }
+}
