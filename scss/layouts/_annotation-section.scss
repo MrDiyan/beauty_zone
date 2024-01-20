@@ -19,11 +19,13 @@
         &-before {
             border-radius: 50%;
             margin-right: auto;
+            position: relative;
         }
 
         &-after {
             border-radius: 50%;
             margin-left: auto;
+            position: relative;
         }
 
     }
@@ -35,12 +37,112 @@
         width: 100%;
         max-width: 1440px;
         height: 168px;
-        background-image: url(/images/annotation-bg.svg);
+        background-image: url(./images/annotation-bg.svg);
         background-size: cover;
         background-repeat: no-repeat;
         pointer-events: none;
-        // border: 3px solid red;
 
+    }
+}
+
+.before-image,
+.after-image {
+    position: relative;
+}
+
+.stars {
+    position: absolute;
+
+
+
+}
+
+.star {
+    &-medium {
+        position: absolute;
+        top: 36px;
+        right: 0;
+        animation: scaling-star 8s infinite ease-out;
+
+        @keyframes scaling-star {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            20% {
+                transform: translate(-20px, 0) scale(.8);
+            }
+
+            50% {
+                transform: translate(0, 0) scale(.7);
+            }
+
+            80% {
+                transform: translate(20px, 0) scale(.8);
+            }
+
+
+        }
+    }
+
+    &-small {
+        position: absolute;
+        bottom: 26px;
+        right: 16px;
+        animation: infinity-eight 15s infinite linear;
+
+        @keyframes infinity-eight {
+
+            0%,
+            50%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            12% {
+                transform: translate(-10px, -10px);
+
+            }
+
+            25% {
+                transform: translate(-20px, 0px);
+            }
+
+            37% {
+                transform: translate(-10px, 10px);
+            }
+
+            62% {
+                transform: translate(10px, -10px);
+            }
+
+            75% {
+                transform: translate(20px, 0);
+            }
+
+            88% {
+                transform: translate(10px, 10px);
+            }
+        }
+    }
+
+    &-large {
+        position: absolute;
+        top: 0;
+        right: 327px;
+        animation: rotating-star 8s infinite linear alternate;
+
+        @keyframes rotating-star {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(45deg);
+            }
+        }
     }
 }
 

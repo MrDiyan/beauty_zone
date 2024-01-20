@@ -1,0 +1,42 @@
+.form {
+
+    &__title {
+        font-family: Roboto;
+        color: var(--color-white);
+        font-size: 22px;
+        margin: 0 74px 32px;
+
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    &__terms {
+        color: var(--color-secondary-light);
+        margin: 0 auto;
+        max-width: 220px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: center;
+
+        &-link {
+            color: var(--color-secondary-light);
+            text-underline-offset: 2px;
+        }
+    }
+}
+
+.form-field {
+    &__contacts {
+        margin: 0 56px 16px;
+
+    }
+
+    &__modal {
+        margin: 0 56px 24px;
+
+    }
+}

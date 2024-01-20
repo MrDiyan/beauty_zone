@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Косметологічна клініка Beaty Zone</title>
-    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
@@ -16,7 +16,7 @@
                 <nav>
                     <a href="/">
                         <svg width="74" height="42" aria-label="Логотип косметологічної клініки Beaty Zone">
-                            <use href="/images/icons.svg#icon-beauty-zone-logo"></use>
+                            <use href="./images/icons.svg#icon-beauty-zone-logo"></use>
                         </svg>
                     </a>
                 </nav>
@@ -55,7 +55,7 @@
                     <p class="hero-section__small-title">Косметологічна клініка</p>
                     <h1 class="hero-section__title capitalize text-brand">Beauty<br>Zone</h1>
                     <div>
-                        <button class="button">Замовити дзвінок</button>
+                        <button class="button modal-btn-open" type="button">Замовити дзвінок</button>
                         <p class="button-description">Запишись та отримай безкоштовну консультацію нашого косметолога
                         </p>
                     </div>
@@ -78,10 +78,22 @@
                             З нами краса назавжди!</p>
                     </div>
                     <div class="annotation-section__comparison">
-                        <img class="annotation-section__comparison-before" src="/images/woman_befor.jpg"
-                            alt="Обличчя до процедур">
-                        <img class="annotation-section__comparison-after" src="/images/woman_after.jpg"
-                            alt="Обличчя після процедур">
+                        <div class="before-image">
+                            <img class="annotation-section__comparison-before" src="/images/woman_befor.jpg"
+                                alt="Обличчя до процедур"><svg class="star-medium" width="40" height="40">
+                                <use href="./images/icons.svg#icon-Star-M"></use>
+                            </svg>
+                            <svg class="star-small" width="16" height="16">
+                                <use href="./images/icons.svg#icon-Star-S"></use>
+                            </svg>
+                        </div>
+                        <div class="after-image">
+                            <img class="annotation-section__comparison-after" src="/images/woman_after.jpg"
+                                alt="Обличчя після процедур">
+                            <svg class="star-large" width="64" height="64">
+                                <use href="./images/icons.svg#icon-Star-L"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,19 +104,19 @@
                 <ul class="advantages-container">
                     <li class="advantages-section__cards">
                         <svg width="48" height="48">
-                            <use href="/images/icons.svg#icon-cosmetician"></use>
+                            <use href="./images/icons.svg#icon-cosmetician"></use>
                         </svg>
                         <p>Всі наші косметологи мають вищу медичну освіту та стаж роботи від 5 років</p>
                     </li>
                     <li class="advantages-section__cards">
                         <svg width="48" height="48">
-                            <use href="/images/icons.svg#icon-equipment"></use>
+                            <use href="./images/icons.svg#icon-equipment"></use>
                         </svg>
                         <p>Використовуємо тільки професійне обладнання та косметику, перевірену часом</p>
                     </li>
                     <li class="advantages-section__cards">
                         <svg width="48" height="48">
-                            <use href="/images/icons.svg#icon-objective"></use>
+                            <use href="./images/icons.svg#icon-objective"></use>
                         </svg>
                         <p>Наша мета - підкреслити переваги та приховати недоліки, а не переробити</p>
                     </li>
@@ -123,7 +135,7 @@
                     <div class="procedures-section__container swiper-container">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
-                                <a href="/">
+                                <a class="remove-underline" href="/">
                                     <div class="slider-card">
                                         <img class="slider-card__image" src="./images/facemasks.jpg"
                                             alt="Маски для обличчя" />
@@ -132,7 +144,7 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
-                                <a href="/">
+                                <a class="remove-underline" href="/">
                                     <div class="slider-card">
                                         <img class="slider-card__image" src="./images/injections.jpg"
                                             alt="Ін'єкції для обличчя" />
@@ -141,7 +153,7 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
-                                <a href="/">
+                                <a class="remove-underline" href="/">
                                     <div class="slider-card">
                                         <img class="slider-card__image" src="./images/facemasks.jpg"
                                             alt="Маски для обличчя" />
@@ -150,7 +162,7 @@
                                 </a>
                             </li>
                             <li class="swiper-slide">
-                                <a href="/">
+                                <a class="remove-underline" href="/">
                                     <div class="slider-card">
                                         <img class="slider-card__image" src="./images/face_cleansing.jpg"
                                             alt="Очищення обличчя" />
@@ -185,32 +197,32 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="contacts-section__form">
-                        <h3 class="form-title">Запишіться <span class="text-brand">безкоштовно</span> та отримайте
+                        <h3 class="form__title">Запишіться <span class="text-brand">безкоштовно</span> та отримайте
                             подарунок</h3>
                         <form name="contact-form" autocomplete="off">
-                            <div class="contacts-section__form-field input">
+                            <div class="form-field__contacts input">
                                 <label class="input__label visually-hidden" for="user-name">
                                     Ваше ім'я та прізвище
                                 </label>
                                 <input class="input__control" type="text" name="user-name" id="user-name"
                                     placeholder="Ваше ім'я та прізвище" required />
                             </div>
-                            <div class="contacts-section__form-field input">
+                            <div class="form-field__contacts input">
                                 <label class="input__label visually-hidden" for="user-tel">
                                     Ваш номер телефону
                                 </label>
                                 <input class="input__control" type="tel" name="user-tel" id="user-tel"
                                     placeholder="Ваш номер телефону" pattern="^\+[0-9]{12}" required />
                             </div>
-                            <div class="contacts-section__form-field input">
+                            <div class="form-field__contacts input">
                                 <label class="input__label visually-hidden" for="user-email">
                                     Ваша електронна пошта
                                 </label>
                                 <input class="input__control" type="email" name="user-email" id="user-email"
                                     placeholder="Ваша електронна пошта" required />
                             </div>
-                            <button class="contacts-section__button button">Записатись безкоштовно</button>
-                            <p class="form-terms">Натискаючи на кнопку я погоджуюсь <a class="form-terms__link"
+                            <button class="form__button button">Записатись безкоштовно</button>
+                            <p class="form__terms">Натискаючи на кнопку я погоджуюсь <a class="form__terms-link"
                                     href="#">з
                                     політикою конфіденційності</a></p>
                         </form>
@@ -226,7 +238,7 @@
                     <div class="footer__logo">
                         <a href="/">
                             <svg width="74" height="42" aria-label="Логотип косметологічної клініки Beaty Zone">
-                                <use href="/images/icons.svg#icon-beauty-zone-logo"></use>
+                                <use href="./images/icons.svg#icon-beauty-zone-logo"></use>
                             </svg>
                         </a>
                     </div>
@@ -274,8 +286,48 @@
         </div>
     </footer>
 
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class="modal__btn-close modal-btn-close" type="button">
+                <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <h2 class="modal__title">Замовити дзвінок</h2>
+            <h3 class="form__title">Запишіться <span class="text-brand">безкоштовно</span> та отримайте
+                подарунок</h3>
+            <form name="contact-form" autocomplete="off">
+                <div class="form-field__modal input">
+                    <label class="input__label visually-hidden" for="user-name">
+                        Ваше ім'я та прізвище
+                    </label>
+                    <input class="input__control" type="text" name="user-name" id="user-name"
+                        placeholder="Ваше ім'я та прізвище" required />
+                </div>
+                <div class="form-field__modal input">
+                    <label class="input__label visually-hidden" for="user-tel">
+                        Ваш номер телефону
+                    </label>
+                    <input class="input__control" type="tel" name="user-tel" id="user-tel"
+                        placeholder="Ваш номер телефону" pattern="^\+[0-9]{12}" required />
+                </div>
+                <div class="form-field__modal input">
+                    <label class="input__label visually-hidden" for="user-email">
+                        Ваша електронна пошта
+                    </label>
+                    <input class="input__control" type="email" name="user-email" id="user-email"
+                        placeholder="Ваша електронна пошта" pattern="^\\S+@\\S+\\.\\S+$" required />
+                </div>
+                <button class="form__button button">Записатись безкоштовно</button>
+                <p class="form__terms">Натискаючи на кнопку я погоджуюсь <a class="form__terms-link" href="#">з
+                        політикою конфіденційності</a></p>
+            </form>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/procedurs-slider.js"></script>
+    <script src="/js/modal.js"></script>
 </body>
 
 </html>
