@@ -7,10 +7,9 @@
     }
 
     &__slider {
-        display: grid;
-        grid-template-columns: 44px 1fr 44px;
-        grid-column-gap: 41px;
+        display: flex;
         align-items: center;
+        gap: 32px;
     }
 
     &__container {

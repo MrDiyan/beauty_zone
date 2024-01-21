@@ -1,12 +1,12 @@
-.slider-card {
+.procedures-card {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     height: 456px;
-    width: 344px;
-    border-radius: 120px 4px;
     background: linear-gradient(180deg, rgba(1, 28, 68, 0.00) 48.53%, rgba(1, 28, 68, 0.73) 84.61%, #011C44 101.39%);
+    border-radius: 120px 4px;
     overflow: hidden;
 
 
@@ -14,12 +14,12 @@
         transition: 0.3s;
         background: linear-gradient(180deg, rgba(1, 28, 68, 0.00) 58.53%, rgba(1, 28, 68, 0.73) 94.61%, #011C44 111.39%);
 
-        .slider-card__image {
+        .procedures-card__image {
             transform: scale(1.1);
 
         }
 
-        .slider-card__text {
+        .procedures-card__text {
             padding-bottom: 36px;
 
         }
