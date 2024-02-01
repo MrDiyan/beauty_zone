@@ -2,19 +2,34 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 176px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $bp-desktop) {
+        margin-bottom: 176px;
+    }
 
     &__content {
-        max-width: 709px;
-        padding-top: 30px;
+
+        @media screen and (min-width: $bp-desktop) {
+            padding-top: 30px;
+            max-width: 709px;
+        }
+    }
+
+    &__content h2 {
+        max-width: 536px;
     }
 
     &__comparison {
-        display: flex;
+        display: none;
         flex-direction: column;
         flex-grow: 1;
         gap: 40px;
         flex-shrink: 0;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+        }
 
         &-before {
             border-radius: 50%;
@@ -33,16 +48,22 @@
     &::before {
         content: '';
         position: absolute;
-        transform: translate(0, -190px);
+        transform: translate(0, -77px);
         width: 100%;
         max-width: 1440px;
-        height: 168px;
+        height: 81px;
         background-image: url(../images/annotation-bg.svg);
         background-size: cover;
         background-repeat: no-repeat;
         pointer-events: none;
 
+        @media screen and (min-width: $bp-tablet) {
+            transform: translate(0, -190px);
+            height: 168px;
+        }
+
     }
+
 }
 
 .before-image,
@@ -52,9 +73,6 @@
 
 .stars {
     position: absolute;
-
-
-
 }
 
 .star {
@@ -62,6 +80,7 @@
         position: absolute;
         top: 36px;
         right: 0;
+        fill: var(--color-brand-light);
         animation: scaling-star 8s infinite ease-out;
 
         @keyframes scaling-star {
@@ -88,10 +107,16 @@
     }
 
     &-small {
-        position: absolute;
-        bottom: 26px;
-        right: 16px;
+        position: relative;
+        fill: var(--color-brand-dark);
+        margin-left: 70%;
         animation: infinity-eight 15s infinite linear;
+
+        @media screen and (min-width: $bp-desktop) {
+            position: absolute;
+            bottom: 26px;
+            right: 16px;
+        }
 
         @keyframes infinity-eight {
 
@@ -131,7 +156,7 @@
     &-large {
         position: absolute;
         top: 0;
-        right: 327px;
+        right: 313px;
         animation: rotating-star 8s infinite linear alternate;
 
         @keyframes rotating-star {
@@ -148,5 +173,11 @@
 
 .annotation-container {
     display: flex;
-    gap: 28px;
+    gap: 54px;
+}
+
+.hide {
+    @media screen and (min-width: $bp-desktop) {
+        display: none;
+    }
 }

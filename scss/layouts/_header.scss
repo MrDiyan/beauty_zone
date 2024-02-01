@@ -1,28 +1,63 @@
 .header {
     position: absolute;
-    height: 106px;
+    height: 70px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+
+
+    @media screen and (min-width: $bp-tablet) {
+        height: 106px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+    }
 
     &__container {
         margin: 0 auto;
-        height: 106px;
+        height: 70px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+
+
+        @media screen and (min-width: $bp-tablet) {
+            height: 106px;
+            gap: 20px;
+
+        }
+    }
+
+
+    &__logo {
+        padding-top: 10px;
+        width: 57px;
+
+        @media screen and (min-width: $bp-tablet) {
+            width: 74px;
+        }
     }
 
     &__menu {
-        display: flex;
-        gap: 56px;
-        font-size: 18px;
+        display: none;
+
+        @media screen and (min-width: $bp-tablet) {
+            display: flex;
+            gap: 36px;
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            gap: 56px;
+        }
     }
 
     &__contacts {
-        display: flex;
-        gap: 32px;
+        display: none;
+
+        @media screen and (min-width: $bp-desktop) {
+            display: flex;
+            gap: 32px;
+        }
 
         &-icon {
             fill: var(--color-brand-dark);
@@ -30,6 +65,17 @@
 
         &-icon:hover {
             fill: var(--color-brand-light);
+        }
+    }
+
+    &__burger {
+        fill: var(--color-white);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-tablet) {
+            display: none;
         }
     }
 }

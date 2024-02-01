@@ -1,37 +1,86 @@
 .hero-section {
-    padding: 123px 0;
+    padding: 70px 0 56px;
     background-image: linear-gradient(89deg, #FFF 37%,
             rgba(255, 255, 255, 0.85) 42%,
             rgba(255, 255, 255, 0.19) 58%,
             rgba(255, 255, 255, 0.00) 72%),
         url("../images/header-bg.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: 0,
+        right -150px top;
+    background-size: cover;
 
+    @media screen and (min-width: $bp-mobile) {
+        background-position: 0,
+            right -120px top;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 123px 0;
+        background-size: auto;
+        background-position: center top;
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(89deg, #FFF 37%,
+                rgba(255, 255, 255, 0.85) 42%,
+                rgba(255, 255, 255, 0.19) 58%,
+                rgba(255, 255, 255, 0.00) 72%),
+            url("../images/header-bg@2x.jpg");
+    }
 
     &__text {
-        margin-left: 10%;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin-left: 10%;
+        }
     }
 
     &__small-title {
         font-family: Roboto;
-        font-size: 18px;
+        font-size: 12px;
         font-weight: 400;
-        margin: 0 0 16px;
+        margin: 0;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 18px;
+            margin: 0 0 16px;
+        }
     }
 
     &__title {
-        font-size: 140px;
+        font-size: 54px;
         line-height: 0.8;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 140px;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
     }
 
 }
 
+.centered {
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+        text-align: left;
+    }
+}
 
 .button-description {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.5;
     max-width: 238px;
-    padding-left: 25px;
+    margin: 8px auto;
+
+    @media screen and (min-width: $bp-tablet) {
+        font-size: 12px;
+        margin: 16px 0;
+        padding-left: 25px;
+    }
 }

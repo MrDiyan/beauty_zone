@@ -1,0 +1,66 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 100%;
+    padding: 16px 20px;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: 0.3s;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        padding: 0;
+        stroke: var(--color-brand-dark);
+        fill: transparent;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            transform: rotate(90deg);
+            transition: 0.3s;
+        }
+    }
+
+    &__nav {
+        margin-bottom: 16px;
+
+        &>a {
+            width: 57px;
+        }
+    }
+
+    &__logo {
+        width: 57px;
+    }
+
+    &__list,
+    &__list>li {
+        margin-bottom: 16px;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 16px;
+
+        &-icon {
+            fill: var(--color-brand-dark);
+            transition: .2s;
+            width: 32px;
+
+        }
+
+        &-icon:hover {
+            fill: var(--color-brand-light);
+        }
+    }
+}
